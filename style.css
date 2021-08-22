@@ -1,0 +1,129 @@
+:root {
+  --main-text-color: hsl(218, 22%, 67%);
+  --primary-color: hsl(179, 62%, 43%);
+  --secondary-color: hsl(218, 22%, 67%);
+  --accent: hsl(71, 73%, 54%);
+  --main-bg-color: hsl(204, 43%, 93%);
+  --main-padding: 2.5rem;
+}
+html {
+  font-size: 10px;
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 1.6em;
+  line-height: 1.6;
+  position: relative;
+  background: var(--main-bg-color);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1,
+h2,
+h3 {
+  margin-bottom: 2rem;
+}
+a {
+  text-decoration: none;
+  color: var(--main-bg-color);
+}
+.grid-price {
+  max-width: 70rem;
+  border-radius: 6px;
+  background: #fff;
+  margin: 7rem 3rem;
+  overflow: hidden;
+}
+.grid-price > * {
+  padding: var(--main-padding);
+}
+.price-header h1 {
+  font-weight: 700;
+  color: var(--primary-color);
+}
+.price-header p {
+  color: var(--secondary-color);
+}
+.price-header .showcase {
+  color: var(--accent);
+  padding-bottom: var(--main-padding);
+}
+.showcase {
+  font-size: 1.7rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.price-subs,
+.price-about {
+  color: var(--main-bg-color);
+  background: var(--primary-color);
+}
+.price-subs span {
+  padding-left: 1rem;
+  font-size: 1.6rem;
+}
+.price-subs .price {
+  font-size: 3.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.price-subs-cta {
+  display: block;
+  border-radius: 5px;
+  background: var(--accent);
+  font-size: 1.8rem;
+  color: #fff;
+  font-weight: 700;
+  padding: 1rem 0;
+  text-align: center;
+  margin-top: var(--main-padding);
+  box-shadow: 3px 3px 10px 2px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+.price-subs-cta:hover {
+  background: hsl(71, 64%, 49%);
+}
+.price-about {
+  opacity: 0.9;
+}
+.price-about a {
+  display: block;
+}
+footer {
+  position: absolute;
+  bottom: 1rem;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+@media screen and (min-width: 500px) {
+  .grid-price {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: min-content;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .price-header {
+    grid-column: span 2;
+  }
+  .grid-price > * {
+    padding: 3.5rem;
+  }
+  .price-subs-cta {
+    margin-top: 4.5rem;
+  }
+}
